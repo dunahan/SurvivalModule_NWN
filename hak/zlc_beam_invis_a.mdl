@@ -1,0 +1,58 @@
+# Exported from NeverBlender 2.8.25 - Friday, 2021-07-09
+filedependancy unknown
+newmodel zlc_beam_invis_a
+setsupermodel zlc_beam_invis_a null
+classification CHARACTER
+setanimationscale 1.0
+beginmodelgeom zlc_beam_invis_a
+node dummy zlc_beam_invis_a
+  parent null
+endnode
+node trimesh back
+  parent zlc_beam_invis_a
+  position  0.00000  0.00000  3.00000
+  orientation  0.00000  1.00000  0.00000  0.00000
+  wirecolor 1.00 1.00 1.00
+  ambient 1.00 1.00 1.00
+  diffuse 1.00 1.00 1.00
+  specular 0.00 0.00 0.00
+  selfillumcolor 0.00 0.00 0.00
+  alpha  0.50
+  bitmap tno01_wood04
+  shininess 0
+  render 1
+  shadow 0
+  verts 8
+     1.00000  0.12500  0.00000
+    -1.00000  0.12500  0.00000
+    -1.00000  0.12500  0.25000
+     1.00000  0.12500  0.25000
+    -1.00000 -0.12500  0.00000
+     1.00000 -0.12500  0.00000
+     1.00000 -0.12500  0.25000
+    -1.00000 -0.12500  0.25000
+  tverts 8
+     0.9995  0.0005  0
+     0.9995  0.9995  0
+     0.0005  0.9995  0
+     0.0005  0.0005  0
+     0.9370  0.0005  0
+     0.9370  0.9995  0
+     0.9995  0.4445  0
+     0.9370  0.4445  0
+  faces 12
+    0 1 2 1  0 1 2 0
+    2 3 0 1  2 3 0 0
+    4 1 0 2  4 0 1 0
+    0 5 4 2  1 5 4 0
+    4 5 6 1  0 1 2 0
+    6 7 4 1  2 3 0 0
+    1 4 7 4  4 0 6 0
+    7 2 1 4  6 7 4 0
+    5 0 3 4  4 0 6 0
+    3 6 5 4  6 7 4 0
+    7 6 3 2  0 1 5 0
+    3 2 7 2  5 4 0 0
+endnode
+endmodelgeom zlc_beam_invis_a
+donemodel zlc_beam_invis_a
