@@ -1,0 +1,20 @@
+# Exported from blender Wednesday, 2020-07-08
+filedependancy unknown
+node trimesh wall_pwk
+  parent tnp_list11_pwk
+  position  0.00000  0.00000  0.00000
+  orientation  1.00000  0.00000  0.00000  0.00000
+  wirecolor 1.00 1.00 1.00
+  ambient 1.00 1.00 1.00
+  diffuse 1.00 1.00 1.00
+  specular 0.00 0.00 0.00
+  bitmap null
+  verts 4
+    -0.25748 -0.25748  0.00000
+     0.25748 -0.25748  0.00000
+    -0.25748  0.25748  0.00000
+     0.25748  0.25748  0.00000
+  faces 2
+    2 0 3  1  0 0 0  0
+    3 0 1  1  0 0 0  0
+endnode
