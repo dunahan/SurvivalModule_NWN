@@ -12,8 +12,8 @@ void main()
 
     object oNewStructure = CreateObject(OBJECT_TYPE_PLACEABLE, sResRef,
                            Location(GetAreaFromLocation(lActual),
-                             Vector(IntToFloat(nX), IntToFloat(nY), IntToFloat(nZ)),
-                             IntToFloat(nO+90))
+                           Vector(IntToFloat(nX), IntToFloat(nY), IntToFloat(nZ)),
+                           IntToFloat(nO+90))
                            );
 
     DestroyObject(oPlaceable, 1.0);

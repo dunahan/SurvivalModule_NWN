@@ -25,7 +25,7 @@ void main()
      if (GetModuleSwitchValue(MODULE_SWITCH_ENABLE_TAGBASED_SCRIPTS) == TRUE)
      {
         SetUserDefinedItemEventNumber(X2_ITEM_EVENT_ACTIVATE);
-        int nRet =   ExecuteScriptAndReturnInt(GetResRef(oItem),OBJECT_SELF);
+        int nRet = ExecuteScriptAndReturnInt(GetResRef(oItem), OBJECT_SELF);    SendMessageToPC(GetItemActivator(), GetName(oItem));
         if (nRet == X2_EXECUTE_SCRIPT_END)
         {
            return;
