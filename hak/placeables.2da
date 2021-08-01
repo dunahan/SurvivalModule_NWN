@@ -856,5 +856,5 @@
 852        "Wall: Visible, Half*"    ****   zlc_wall_visib_b ****       ****         ****         ****         ****         ****       ****    ****    ****        1      
 853        "Post: Visible, Full*"    ****   zlc_post_visib_a ****       ****         ****         ****         ****         ****       ****    ****    ****        1      
 854        "Post: Visible, Half*"    ****   zlc_post_visib_b ****       ****         ****         ****         ****         ****       ****    ****    ****        1      
-855        "Beam: Invisible*"  		 ****   zlc_beam_invis_a ****       ****         ****         ****         ****         ****       ****    ****    ****        1      
-856        "Beam: Visible*"    		 ****   zlc_beam_visib_a ****       ****         ****         ****         ****         ****       ****    ****    ****        1      
+855        "Beam: Invisible*"  		   ****   zlc_beam_invis_a ****       ****         ****         ****         ****         ****       ****    ****    ****        1      
+856        "Beam: Visible*"    		   ****   zlc_beam_visib_a ****       ****         ****         ****         ****         ****       ****    ****    ****        1      
