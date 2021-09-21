@@ -38,6 +38,7 @@ void main()
                             Vector(IntToFloat(nX), IntToFloat(nY), IntToFloat(nZ)),
                             0.0)
                             );
+
         SetLocalObject(oStructure, "Build_Creator", oPC);
     }
 }
