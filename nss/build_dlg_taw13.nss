@@ -2,5 +2,5 @@
 
 int StartingConditional()
 {
-  return ICNR_IsRecipePossibleToBuild(GetPCSpeaker(), OBJECT_SELF, GetLocalInt(OBJECT_SELF, "ICNR_RecipeChoosen"));
+  return BUILD_IsRecipePossibleToBuild(GetPCSpeaker(), OBJECT_SELF, GetLocalInt(OBJECT_SELF, "BUILD_RecipeChoosen"));
 }

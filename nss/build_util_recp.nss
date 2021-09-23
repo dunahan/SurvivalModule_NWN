@@ -1,11 +1,15 @@
 #include "x3_inc_string"
+#include "build_util_wrkb"
+#include "build_util_lang"
+
+  const string BUILD_UTILS_CONTAINER = "BUILD_Container";
 
 //Returns TRUE if oItem is stackable
 int GetIsStackableItem(object oItem)
 {
-  object oCopy, oContainer = GetObjectByTag("ICNR_Container");
+  object oCopy, oContainer = GetObjectByTag(BUILD_UTILS_CONTAINER);
   if (!GetIsObjectValid(oContainer))
-    CreateObject(OBJECT_TYPE_PLACEABLE, "plc_invisobj", GetStartingLocation(), FALSE, "ICNR_Container");
+    CreateObject(OBJECT_TYPE_PLACEABLE, "plc_invisobj", GetStartingLocation(), FALSE, BUILD_UTILS_CONTAINER);
 
   oCopy = CopyItem(oItem, oContainer);
   SetItemStackSize(oCopy, 2);
@@ -16,25 +20,25 @@ int GetIsStackableItem(object oItem)
   return bStack;
 }
 
-string ICNR_GetObjectName(string sTagOrResRef)
+string BUILD_GetObjectName(string sTagOrResRef)
 {
   return GetName(GetObjectByTag(sTagOrResRef));
 }
 
-int ICNR_GetCrafterLvl(object oCrafter)
+int BUILD_GetCrafterLvl(object oCrafter)
 {
   return GetHitDice(oCrafter);
 }
 
-string ICNR_CreateRecipeLabel(int nRow, object oWorkbench=OBJECT_SELF)
+string BUILD_CreateRecipeLabel(int nRow, object oWorkbench=OBJECT_SELF)
 {
   string l = "Error";
-  l = Get2DAString(GetTag(oWorkbench), "Label", nRow);
+  l = Get2DAString(GetTag(oWorkbench), BUILD_2DA_COLNAME001, nRow);
 
   return l;
 }
 
-int ICNR_GetTotalNumberOfAvailableRessources(object oWorkbench, string sRessource)
+int BUILD_GetTotalNumberOfAvailableRessources(object oWorkbench, string sRessource)
 {
   object oItem = GetFirstItemInInventory(oWorkbench); int b;
   while (GetIsObjectValid(oItem))
@@ -51,46 +55,46 @@ int ICNR_GetTotalNumberOfAvailableRessources(object oWorkbench, string sRessourc
   return b;
 }
 
-string ICNR_MissingRessourceColor(object oWorkbench, string sRessource, int nTotalNumber=1)
+string BUILD_MissingRessourceColor(object oWorkbench, string sRessource, int nTotalNumber=1)
 {
-  if (ICNR_GetTotalNumberOfAvailableRessources(oWorkbench, sRessource) >= nTotalNumber)
-    return ICNR_GetObjectName(sRessource);
+  if (BUILD_GetTotalNumberOfAvailableRessources(oWorkbench, sRessource) >= nTotalNumber)
+    return BUILD_GetObjectName(sRessource);
 
-  return StringToRGBString(ICNR_GetObjectName(sRessource), STRING_COLOR_RED);
+  return StringToRGBString(BUILD_GetObjectName(sRessource), STRING_COLOR_RED);
 }
 
-string ICNR_BuildUpComponentText(int nRow, object oWorkbench)
+string BUILD_BuildUpComponentText(int nRow, object oWorkbench)
 {
   string t = "Error";
 
-  t  = IntToString(ICNR_GetTotalNumberOfAvailableRessources(oWorkbench, Get2DAString(GetTag(oWorkbench), "Comp1", nRow))) + " / " + Get2DAString(GetTag(oWorkbench), "AnzC1", nRow)+"   ";
-  t += ICNR_MissingRessourceColor(oWorkbench, Get2DAString(GetTag(oWorkbench), "Comp1", nRow), StringToInt(Get2DAString(GetTag(oWorkbench), "AnzC1", nRow)))+"\n";
+  t  = IntToString(BUILD_GetTotalNumberOfAvailableRessources(oWorkbench, Get2DAString(GetTag(oWorkbench), BUILD_2DA_COLNAME007, nRow))) + " / " + Get2DAString(GetTag(oWorkbench), BUILD_2DA_COLNAME008, nRow)+"   ";
+  t += BUILD_MissingRessourceColor(oWorkbench, Get2DAString(GetTag(oWorkbench), BUILD_2DA_COLNAME007, nRow), StringToInt(Get2DAString(GetTag(oWorkbench), BUILD_2DA_COLNAME008, nRow)))+"\n";
 
-  if  (Get2DAString(GetTag(oWorkbench), "AnzC2", nRow) != "")
+  if  (Get2DAString(GetTag(oWorkbench), BUILD_2DA_COLNAME010, nRow) != "")
   {
-    t += IntToString(ICNR_GetTotalNumberOfAvailableRessources(oWorkbench, Get2DAString(GetTag(oWorkbench), "Comp2", nRow))) + " / " + Get2DAString(GetTag(oWorkbench), "AnzC2", nRow)+"   ";
-    t += ICNR_MissingRessourceColor(oWorkbench, Get2DAString(GetTag(oWorkbench), "Comp2", nRow), StringToInt(Get2DAString(GetTag(oWorkbench), "AnzC2", nRow)))+"\n";
+    t += IntToString(BUILD_GetTotalNumberOfAvailableRessources(oWorkbench, Get2DAString(GetTag(oWorkbench), BUILD_2DA_COLNAME009, nRow))) + " / " + Get2DAString(GetTag(oWorkbench), BUILD_2DA_COLNAME010, nRow)+"   ";
+    t += BUILD_MissingRessourceColor(oWorkbench, Get2DAString(GetTag(oWorkbench), BUILD_2DA_COLNAME009, nRow), StringToInt(Get2DAString(GetTag(oWorkbench), BUILD_2DA_COLNAME010, nRow)))+"\n";
   }
 
-  if  (Get2DAString(GetTag(oWorkbench), "AnzC3", nRow) != "")
+  if  (Get2DAString(GetTag(oWorkbench), BUILD_2DA_COLNAME012, nRow) != "")
   {
-    t += IntToString(ICNR_GetTotalNumberOfAvailableRessources(oWorkbench, Get2DAString(GetTag(oWorkbench), "Comp3", nRow))) + " / " + Get2DAString(GetTag(oWorkbench), "AnzC3", nRow)+"   ";
-    t += ICNR_MissingRessourceColor(oWorkbench, Get2DAString(GetTag(oWorkbench), "Comp3", nRow), StringToInt(Get2DAString(GetTag(oWorkbench), "AnzC3", nRow)))+"\n";
+    t += IntToString(BUILD_GetTotalNumberOfAvailableRessources(oWorkbench, Get2DAString(GetTag(oWorkbench), BUILD_2DA_COLNAME011, nRow))) + " / " + Get2DAString(GetTag(oWorkbench), BUILD_2DA_COLNAME012, nRow)+"   ";
+    t += BUILD_MissingRessourceColor(oWorkbench, Get2DAString(GetTag(oWorkbench), BUILD_2DA_COLNAME011, nRow), StringToInt(Get2DAString(GetTag(oWorkbench), BUILD_2DA_COLNAME012, nRow)))+"\n";
   }
 
   //if more components are defined, copy the last rows and modify them
   return t;
 }
 
-string ICNR_CreateRecipeText(int nRow, object oCrafter, object oWorkbench=OBJECT_SELF)
+string BUILD_CreateRecipeText(int nRow, object oCrafter, object oWorkbench=OBJECT_SELF)
 {
   string t = "Error";
 
   t  = "Hierzu werden folgende Dinge benötigt:\n";
-  t += ICNR_BuildUpComponentText(nRow, oWorkbench);
+  t += BUILD_BuildUpComponentText(nRow, oWorkbench);
   t += "\nDu kannst das";
 
-  if (ICNR_GetCrafterLvl(oCrafter) >= StringToInt(Get2DAString(GetTag(oWorkbench), "Lvl", nRow)))
+  if (BUILD_GetCrafterLvl(oCrafter) >= StringToInt(Get2DAString(GetTag(oWorkbench), BUILD_2DA_COLNAME003, nRow)))
     t += " einfach ";
 
   else
@@ -101,32 +105,32 @@ string ICNR_CreateRecipeText(int nRow, object oCrafter, object oWorkbench=OBJECT
   return t;
 }
 
-int ICNR_IsRecipePossibleToBuild(object oCrafter, object oWorkbench, int nRow)
+int BUILD_IsRecipePossibleToBuild(object oCrafter, object oWorkbench, int nRow)
 {
   int b = FALSE;
   //first check is crafter lvl equal or greater?
-  if (ICNR_GetCrafterLvl(oCrafter) >= StringToInt(Get2DAString(GetTag(oWorkbench), "Lvl", nRow)))
+  if (BUILD_GetCrafterLvl(oCrafter) >= StringToInt(Get2DAString(GetTag(oWorkbench), BUILD_2DA_COLNAME003, nRow)))
     b = TRUE;
   else
     b = FALSE;
 
   //now check are enough materials available?
-  if (ICNR_GetTotalNumberOfAvailableRessources(oWorkbench, Get2DAString(GetTag(oWorkbench), "Comp1", nRow)) >= StringToInt(Get2DAString(GetTag(oWorkbench), "AnzC1", nRow)))
+  if (BUILD_GetTotalNumberOfAvailableRessources(oWorkbench, Get2DAString(GetTag(oWorkbench), BUILD_2DA_COLNAME007, nRow)) >= StringToInt(Get2DAString(GetTag(oWorkbench), BUILD_2DA_COLNAME008, nRow)))
     b = TRUE;
   else
     b = FALSE;
 
-  if  (Get2DAString(GetTag(oWorkbench), "AnzC2", nRow) != "")
+  if  (Get2DAString(GetTag(oWorkbench), BUILD_2DA_COLNAME010, nRow) != "")
   {
-    if (ICNR_GetTotalNumberOfAvailableRessources(oWorkbench, Get2DAString(GetTag(oWorkbench), "Comp2", nRow)) >= StringToInt(Get2DAString(GetTag(oWorkbench), "AnzC2", nRow)))
+    if (BUILD_GetTotalNumberOfAvailableRessources(oWorkbench, Get2DAString(GetTag(oWorkbench), BUILD_2DA_COLNAME009, nRow)) >= StringToInt(Get2DAString(GetTag(oWorkbench), BUILD_2DA_COLNAME010, nRow)))
       b = TRUE;
     else
       b = FALSE;
   }
 
-  if  (Get2DAString(GetTag(oWorkbench), "AnzC3", nRow) != "")
+  if  (Get2DAString(GetTag(oWorkbench), BUILD_2DA_COLNAME012, nRow) != "")
   {
-    if (ICNR_GetTotalNumberOfAvailableRessources(oWorkbench, Get2DAString(GetTag(oWorkbench), "Comp3", nRow)) >= StringToInt(Get2DAString(GetTag(oWorkbench), "AnzC3", nRow)))
+    if (BUILD_GetTotalNumberOfAvailableRessources(oWorkbench, Get2DAString(GetTag(oWorkbench), BUILD_2DA_COLNAME011, nRow)) >= StringToInt(Get2DAString(GetTag(oWorkbench), BUILD_2DA_COLNAME012, nRow)))
       b = TRUE;
     else
       b = FALSE;
@@ -135,51 +139,51 @@ int ICNR_IsRecipePossibleToBuild(object oCrafter, object oWorkbench, int nRow)
   return b;
 }
 
-string ICNR_CollectProductData(int nRow, object oWorkbench=OBJECT_SELF)
+string BUILD_CollectProductData(int nRow, object oWorkbench=OBJECT_SELF)
 {
-  return Get2DAString(GetTag(oWorkbench), "Product", nRow)+"|"+Get2DAString(GetTag(oWorkbench), "Anz", nRow);
+  return Get2DAString(GetTag(oWorkbench), BUILD_2DA_COLNAME006, nRow)+"|"+Get2DAString(GetTag(oWorkbench), BUILD_2DA_COLNAME002, nRow);
 }
 
-string ICNR_CollectComponentData(int nRow, object oWorkbench=OBJECT_SELF)
+string BUILD_CollectComponentData(int nRow, object oWorkbench=OBJECT_SELF)
 {
-  string sReturn = Get2DAString(GetTag(oWorkbench), "Comp1", nRow)+"|"+Get2DAString(GetTag(oWorkbench), "AnzC1", nRow);    //and how many are needed for one product
+  string sReturn = Get2DAString(GetTag(oWorkbench), BUILD_2DA_COLNAME007, nRow)+"|"+Get2DAString(GetTag(oWorkbench), BUILD_2DA_COLNAME008, nRow);    //and how many are needed for one product
 
-  if  (Get2DAString(GetTag(oWorkbench), "AnzC2", nRow) != "")                   //only collect more data oly if needed
-    sReturn += ","+Get2DAString(GetTag(oWorkbench), "Comp2", nRow)+"|"+Get2DAString(GetTag(oWorkbench), "AnzC2", nRow);
+  if  (Get2DAString(GetTag(oWorkbench), BUILD_2DA_COLNAME010, nRow) != "")                   //only collect more data oly if needed
+    sReturn += ","+Get2DAString(GetTag(oWorkbench), BUILD_2DA_COLNAME009, nRow)+"|"+Get2DAString(GetTag(oWorkbench), BUILD_2DA_COLNAME010, nRow);
 
-  if  (Get2DAString(GetTag(oWorkbench), "AnzC3", nRow) != "")
-    sReturn += ","+Get2DAString(GetTag(oWorkbench), "Comp3", nRow)+"|"+Get2DAString(GetTag(oWorkbench), "AnzC3", nRow);
+  if  (Get2DAString(GetTag(oWorkbench), BUILD_2DA_COLNAME012, nRow) != "")
+    sReturn += ","+Get2DAString(GetTag(oWorkbench), BUILD_2DA_COLNAME011, nRow)+"|"+Get2DAString(GetTag(oWorkbench), BUILD_2DA_COLNAME012, nRow);
 
   return sReturn;
 }
 
-string ICNR_CollectBiProductData(int nRow, object oWorkbench=OBJECT_SELF)
+string BUILD_CollectBiProductData(int nRow, object oWorkbench=OBJECT_SELF)
 {
   string sReturn = "";
-  if  (Get2DAString(GetTag(oWorkbench), "AnzB1", nRow) != "")                   //not every recipe must have a biproduct ;-)
-    sReturn = Get2DAString(GetTag(oWorkbench), "BiProd1", nRow)+"|"+Get2DAString(GetTag(oWorkbench), "AnzB1", nRow);
+  if  (Get2DAString(GetTag(oWorkbench), BUILD_2DA_COLNAME014, nRow) != "")                   //not every recipe must have a biproduct ;-)
+    sReturn = Get2DAString(GetTag(oWorkbench), BUILD_2DA_COLNAME013, nRow)+"|"+Get2DAString(GetTag(oWorkbench), BUILD_2DA_COLNAME014, nRow);
 
-  if  (Get2DAString(GetTag(oWorkbench), "AnzB2", nRow) != "")
-    sReturn += ","+Get2DAString(GetTag(oWorkbench), "BiProd2", nRow)+"|"+Get2DAString(GetTag(oWorkbench), "AnzB2", nRow);
+  if  (Get2DAString(GetTag(oWorkbench), BUILD_2DA_COLNAME016, nRow) != "")
+    sReturn += ","+Get2DAString(GetTag(oWorkbench), BUILD_2DA_COLNAME015, nRow)+"|"+Get2DAString(GetTag(oWorkbench), BUILD_2DA_COLNAME016, nRow);
 
-  if  (Get2DAString(GetTag(oWorkbench), "AnzB3", nRow) != "")
-    sReturn += ","+Get2DAString(GetTag(oWorkbench), "BiProd3", nRow)+"|"+Get2DAString(GetTag(oWorkbench), "AnzB3", nRow);
+  if  (Get2DAString(GetTag(oWorkbench), BUILD_2DA_COLNAME018, nRow) != "")
+    sReturn += ","+Get2DAString(GetTag(oWorkbench), BUILD_2DA_COLNAME017, nRow)+"|"+Get2DAString(GetTag(oWorkbench), BUILD_2DA_COLNAME018, nRow);
 
   return sReturn;
 }
 
-int ICNR_CollectAttributeData(int nRow, object oWorkbench=OBJECT_SELF)
+int BUILD_CollectAttributeData(int nRow, object oWorkbench=OBJECT_SELF)
 {
-  int nAttrAff  = StringToInt(Get2DAString(GetTag(oWorkbench), "Str", nRow));
-      nAttrAff += StringToInt(Get2DAString(GetTag(oWorkbench), "Dex", nRow));
-      nAttrAff += StringToInt(Get2DAString(GetTag(oWorkbench), "Con", nRow));
-      nAttrAff += StringToInt(Get2DAString(GetTag(oWorkbench), "Int", nRow));
-      nAttrAff += StringToInt(Get2DAString(GetTag(oWorkbench), "Wis", nRow));
-      nAttrAff += StringToInt(Get2DAString(GetTag(oWorkbench), "Cha", nRow));   //that sum up, if any bonus is given
+  int nAttrAff  = StringToInt(Get2DAString(GetTag(oWorkbench), BUILD_2DA_COLNAME019, nRow));
+      nAttrAff += StringToInt(Get2DAString(GetTag(oWorkbench), BUILD_2DA_COLNAME020, nRow));
+      nAttrAff += StringToInt(Get2DAString(GetTag(oWorkbench), BUILD_2DA_COLNAME021, nRow));
+      nAttrAff += StringToInt(Get2DAString(GetTag(oWorkbench), BUILD_2DA_COLNAME022, nRow));
+      nAttrAff += StringToInt(Get2DAString(GetTag(oWorkbench), BUILD_2DA_COLNAME023, nRow));
+      nAttrAff += StringToInt(Get2DAString(GetTag(oWorkbench), BUILD_2DA_COLNAME024, nRow));   //that sum up, if any bonus is given
   return nAttrAff;
 }
 
-int ICNR_UseComponents(object oComponent, int nComponentsToUse=1)               //nComponentsToUse only when stackable!
+int BUILD_UseComponents(object oComponent, int nComponentsToUse=1)               //nComponentsToUse only when stackable!
 {
   int c = 0, bStackable = GetIsStackableItem(oComponent);
   object oCopy;
@@ -214,14 +218,14 @@ int ICNR_UseComponents(object oComponent, int nComponentsToUse=1)               
   return c;
 }
 
-void ICNR_CreateCraftingResult(object oUser, string sProductData, object oWorkbench=OBJECT_SELF)
+void BUILD_CreateCraftingResult(object oUser, string sProductData, object oWorkbench=OBJECT_SELF)
 {
-  string sItemToCreate = StringParse(sProductData, "|");                                  //like "icnr_itm_hlzkohl"
+  string sItemToCreate = StringParse(sProductData, "|");                                  //like "build_itm_hlzkhl"
   int nItemToCreate = StringToInt(StringRemoveParsed(sProductData, sItemToCreate, "|"));  //like "1"
   object oCraftingResult = CreateItemOnObject(sItemToCreate, oWorkbench, nItemToCreate);
   SetIdentified(oCraftingResult, TRUE);
 
-  SendMessageToPC(oUser, "Du hast hier erfolgreich "+GetName(oCraftingResult)+" hergestellt.");
+  SendMessageToPC(oUser, BUILD_LANG_RCP_CRAFTS1+GetName(oCraftingResult)+BUILD_LANG_RCP_CRAFTS2);
 }
 
 

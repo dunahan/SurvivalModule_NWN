@@ -2,7 +2,7 @@
 
 int StartingConditional()
 {
-  ICNR_SetPages();
-  ICNR_SetUpConvoDefaults();
+  BUILD_SetPages();
+  BUILD_SetUpConvoDefaults();
   return TRUE;
 }

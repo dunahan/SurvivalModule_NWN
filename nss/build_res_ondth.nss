@@ -1,6 +1,8 @@
+#include "build_util_inc"
+
 void main()
 {
-  object oPlc = CreateObject(OBJECT_TYPE_PLACEABLE, "icnr_spawner", GetLocation(OBJECT_SELF));
+  object oPlc = CreateObject(OBJECT_TYPE_PLACEABLE, "build_spawner", GetLocation(OBJECT_SELF));
 
-  SendMessageToPC(GetFirstPC(), "Hier ist nichts mehr zu holen.");
+  SendMessageToPC(GetFirstPC(), BUILD_LANG_RES_NOTMORE);
 }
