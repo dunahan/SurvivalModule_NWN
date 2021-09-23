@@ -41,12 +41,12 @@
   "LocalizedName": {
     "type": "cexolocstring",
     "value": {
-      "4": "build_structures"
+      "4": "build_on_site"
     }
   },
   "ModelPart1": {
     "type": "byte",
-    "value": 1
+    "value": 9
   },
   "PaletteID": {
     "type": "byte",
@@ -102,30 +102,10 @@
   },
   "Tag": {
     "type": "cexostring",
-    "value": "build_structures"
+    "value": "build_on_site"
   },
   "TemplateResRef": {
     "type": "resref",
-    "value": "build_structures"
-  },
-  "VarTable": {
-    "type": "list",
-    "value": [
-      {
-        "__struct_id": 0,
-        "Name": {
-          "type": "cexostring",
-          "value": "BUILD_RES"
-        },
-        "Type": {
-          "type": "dword",
-          "value": 3
-        },
-        "Value": {
-          "type": "cexostring",
-          "value": "string"
-        }
-      }
-    ]
+    "value": "build_on_site"
   }
 }
