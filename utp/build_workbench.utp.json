@@ -87,7 +87,7 @@
     "id": 5705,
     "type": "cexolocstring",
     "value": {
-      "4": "Workbench blueprint"
+      "4": "Wokbench blueprint"
     }
   },
   "OnClick": {
@@ -176,7 +176,7 @@
   },
   "Tag": {
     "type": "cexostring",
-    "value": "buildTagToWorkbench"
+    "value": "buildTagForWorkbenchEqals2DA"
   },
   "TemplateResRef": {
     "type": "resref",

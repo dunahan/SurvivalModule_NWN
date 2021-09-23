@@ -6,7 +6,7 @@
   },
   "Appearance": {
     "type": "dword",
-    "value": 157
+    "value": 843
   },
   "AutoRemoveKey": {
     "type": "byte",
@@ -33,7 +33,7 @@
     "value": 15
   },
   "Description": {
-    "id": 14662,
+    "id": 14627,
     "type": "cexolocstring",
     "value": {
       "4": ""
@@ -84,10 +84,11 @@
     "value": 0
   },
   "LocName": {
-    "id": 5800,
+    "id": 111366,
     "type": "cexolocstring",
     "value": {
-      "4": "build_spawner"
+      "0": "build_gridhelper",
+      "4": "build_gridhelper"
     }
   },
   "OnClick": {
@@ -112,7 +113,7 @@
   },
   "OnHeartbeat": {
     "type": "resref",
-    "value": "build_spawn_ohb"
+    "value": ""
   },
   "OnInvDisturbed": {
     "type": "resref",
@@ -164,7 +165,7 @@
   },
   "PortraitId": {
     "type": "word",
-    "value": 515
+    "value": 509
   },
   "Ref": {
     "type": "byte",
@@ -176,11 +177,11 @@
   },
   "Tag": {
     "type": "cexostring",
-    "value": "build_spawner"
+    "value": "build_gridhelper"
   },
   "TemplateResRef": {
     "type": "resref",
-    "value": "build_spawner"
+    "value": "build_gridhelper"
   },
   "TrapDetectable": {
     "type": "byte",

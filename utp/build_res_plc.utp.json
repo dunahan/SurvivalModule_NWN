@@ -6,7 +6,7 @@
   },
   "Appearance": {
     "type": "dword",
-    "value": 15105
+    "value": 479
   },
   "AutoRemoveKey": {
     "type": "byte",
@@ -164,7 +164,7 @@
   },
   "PortraitId": {
     "type": "word",
-    "value": 515
+    "value": 0
   },
   "Ref": {
     "type": "byte",
@@ -221,7 +221,7 @@
         "__struct_id": 0,
         "Name": {
           "type": "cexostring",
-          "value": "build_Util"
+          "value": "ICNR_Util"
         },
         "Type": {
           "type": "dword",

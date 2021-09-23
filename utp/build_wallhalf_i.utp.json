@@ -6,7 +6,7 @@
   },
   "Appearance": {
     "type": "dword",
-    "value": 157
+    "value": 848
   },
   "AutoRemoveKey": {
     "type": "byte",
@@ -30,10 +30,9 @@
   },
   "CurrentHP": {
     "type": "short",
-    "value": 15
+    "value": 1000
   },
   "Description": {
-    "id": 14662,
     "type": "cexolocstring",
     "value": {
       "4": ""
@@ -41,7 +40,7 @@
   },
   "DisarmDC": {
     "type": "byte",
-    "value": 15
+    "value": 0
   },
   "Faction": {
     "type": "dword",
@@ -49,11 +48,11 @@
   },
   "Fort": {
     "type": "byte",
-    "value": 16
+    "value": 0
   },
   "Hardness": {
     "type": "byte",
-    "value": 5
+    "value": 0
   },
   "HasInventory": {
     "type": "byte",
@@ -61,7 +60,7 @@
   },
   "HP": {
     "type": "short",
-    "value": 15
+    "value": 1000
   },
   "Interruptable": {
     "type": "byte",
@@ -84,15 +83,14 @@
     "value": 0
   },
   "LocName": {
-    "id": 5800,
     "type": "cexolocstring",
     "value": {
-      "4": "build_spawner"
+      "4": "Wall, Half"
     }
   },
   "OnClick": {
     "type": "resref",
-    "value": ""
+    "value": "build_struc_oncl"
   },
   "OnClosed": {
     "type": "resref",
@@ -100,7 +98,7 @@
   },
   "OnDamaged": {
     "type": "resref",
-    "value": ""
+    "value": "build_struc_onat"
   },
   "OnDeath": {
     "type": "resref",
@@ -112,7 +110,7 @@
   },
   "OnHeartbeat": {
     "type": "resref",
-    "value": "build_spawn_ohb"
+    "value": ""
   },
   "OnInvDisturbed": {
     "type": "resref",
@@ -152,11 +150,11 @@
   },
   "OpenLockDC": {
     "type": "byte",
-    "value": 18
+    "value": 0
   },
   "PaletteID": {
     "type": "byte",
-    "value": 9
+    "value": 22
   },
   "Plot": {
     "type": "byte",
@@ -164,7 +162,7 @@
   },
   "PortraitId": {
     "type": "word",
-    "value": 515
+    "value": 0
   },
   "Ref": {
     "type": "byte",
@@ -172,15 +170,15 @@
   },
   "Static": {
     "type": "byte",
-    "value": 1
+    "value": 0
   },
   "Tag": {
     "type": "cexostring",
-    "value": "build_spawner"
+    "value": "build_wallhalf_i"
   },
   "TemplateResRef": {
     "type": "resref",
-    "value": "build_spawner"
+    "value": "build_wallhalf_i"
   },
   "TrapDetectable": {
     "type": "byte",
@@ -212,7 +210,7 @@
   },
   "Useable": {
     "type": "byte",
-    "value": 0
+    "value": 1
   },
   "Will": {
     "type": "byte",

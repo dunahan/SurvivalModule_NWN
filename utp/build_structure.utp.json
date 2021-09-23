@@ -6,7 +6,7 @@
   },
   "Appearance": {
     "type": "dword",
-    "value": 157
+    "value": 847
   },
   "AutoRemoveKey": {
     "type": "byte",
@@ -30,18 +30,15 @@
   },
   "CurrentHP": {
     "type": "short",
-    "value": 15
+    "value": 10
   },
   "Description": {
-    "id": 14662,
     "type": "cexolocstring",
-    "value": {
-      "4": ""
-    }
+    "value": {}
   },
   "DisarmDC": {
     "type": "byte",
-    "value": 15
+    "value": 0
   },
   "Faction": {
     "type": "dword",
@@ -49,7 +46,7 @@
   },
   "Fort": {
     "type": "byte",
-    "value": 16
+    "value": 5
   },
   "Hardness": {
     "type": "byte",
@@ -61,7 +58,7 @@
   },
   "HP": {
     "type": "short",
-    "value": 15
+    "value": 10
   },
   "Interruptable": {
     "type": "byte",
@@ -77,17 +74,16 @@
   },
   "Lockable": {
     "type": "byte",
-    "value": 0
+    "value": 1
   },
   "Locked": {
     "type": "byte",
     "value": 0
   },
   "LocName": {
-    "id": 5800,
     "type": "cexolocstring",
     "value": {
-      "4": "build_spawner"
+      "4": "*build_structure_blueprint*"
     }
   },
   "OnClick": {
@@ -112,7 +108,7 @@
   },
   "OnHeartbeat": {
     "type": "resref",
-    "value": "build_spawn_ohb"
+    "value": ""
   },
   "OnInvDisturbed": {
     "type": "resref",
@@ -152,11 +148,11 @@
   },
   "OpenLockDC": {
     "type": "byte",
-    "value": 18
+    "value": 0
   },
   "PaletteID": {
     "type": "byte",
-    "value": 9
+    "value": 22
   },
   "Plot": {
     "type": "byte",
@@ -164,7 +160,7 @@
   },
   "PortraitId": {
     "type": "word",
-    "value": 515
+    "value": 0
   },
   "Ref": {
     "type": "byte",
@@ -176,11 +172,11 @@
   },
   "Tag": {
     "type": "cexostring",
-    "value": "build_spawner"
+    "value": "build_structure"
   },
   "TemplateResRef": {
     "type": "resref",
-    "value": "build_spawner"
+    "value": "build_structure"
   },
   "TrapDetectable": {
     "type": "byte",
