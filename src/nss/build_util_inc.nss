@@ -8,7 +8,7 @@
 
   const int    BUILD_HELPER_COL = 5;
   const int    BUILD_HELPER_ROW = 5;
-  const int    BUILD_DEBUG_MSGS = FALSE;
+  const int    BUILD_DEBUG_MSGS = TRUE;
   const string BUILD_HELPER_PLC = "build_gridhelper";
   const string BUILD_HELPER_CHK = "NW_CHICKEN";
 

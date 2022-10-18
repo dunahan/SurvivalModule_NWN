@@ -1,4 +1,5 @@
 #include "build_util_inc"
+string script = "build_dlg_oat06";
 
 void main()
 {

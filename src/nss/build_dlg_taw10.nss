@@ -1,4 +1,5 @@
 #include "build_util_inc"
+string script = "build_dlg_taw10";
 
 int StartingConditional()
 {

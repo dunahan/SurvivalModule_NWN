@@ -1,5 +1,8 @@
+#include "build_util_inc"
+string script = "build_struc_oncl";
+
 void main()
-{
+{                                                                                           d("Running: "+script);
     object oPlaceable = OBJECT_SELF;
     string sResRef = GetResRef(oPlaceable);
 

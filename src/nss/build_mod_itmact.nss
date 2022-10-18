@@ -13,6 +13,8 @@
 //:://////////////////////////////////////////////
 
 #include "x2_inc_switches"
+string script = "build_mod_itmact";
+
 void main()
 {
     object oItem = GetItemActivated();
@@ -30,5 +32,5 @@ void main()
 
     }
 
-//  ExecuteScript("x2_mod_def_act", oItem);
+    //ExecuteScript("x2_mod_def_act", oItem);
 }

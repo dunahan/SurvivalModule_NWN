@@ -1,0 +1,343 @@
+NDB V1.0
+0000009 0000002 0000167 0000019 0000029
+n00 build_util_lang
+n01 x0_i0_stringlib
+N02 build_struc_onus
+n03 x3_inc_string
+n04 build_util_wrkb
+n05 build_util_recp
+n06 build_util_resc
+n07 x2_inc_switches
+n08 build_util_inc
+s 03 vector
+sf f x
+sf f y
+sf f z
+s 05 sStringTokenizer
+sf i nRemainingLen
+sf s sOrig
+sf s sRemaining
+sf s sDelim
+sf s sLastTok
+f ffffffff ffffffff 000 s STRING_COLOR_BLACK
+f ffffffff ffffffff 000 s STRING_COLOR_BLUE
+f ffffffff ffffffff 000 s STRING_COLOR_GREEN
+f ffffffff ffffffff 000 s STRING_COLOR_PINK
+f ffffffff ffffffff 000 s STRING_COLOR_RED
+f ffffffff ffffffff 000 s STRING_COLOR_ROSE
+f ffffffff ffffffff 000 s STRING_COLOR_WHITE
+f ffffffff ffffffff 002 s StringToRGBString
+fp s
+fp s
+f ffffffff ffffffff 003 s StringParse
+fp s
+fp s
+fp i
+f ffffffff ffffffff 004 s StringRemoveParsed
+fp s
+fp s
+fp s
+fp i
+f ffffffff ffffffff 003 s StringReplace
+fp s
+fp s
+fp s
+f ffffffff ffffffff 000 i BUILD_MAXRECI_PG
+f ffffffff ffffffff 000 s BUILD_2DA_COLNAME001
+f ffffffff ffffffff 000 s BUILD_2DA_COLNAME002
+f ffffffff ffffffff 000 s BUILD_2DA_COLNAME003
+f ffffffff ffffffff 000 s BUILD_2DA_COLNAME004
+f ffffffff ffffffff 000 s BUILD_2DA_COLNAME005
+f ffffffff ffffffff 000 s BUILD_2DA_COLNAME006
+f ffffffff ffffffff 000 s BUILD_2DA_COLNAME007
+f ffffffff ffffffff 000 s BUILD_2DA_COLNAME008
+f ffffffff ffffffff 000 s BUILD_2DA_COLNAME009
+f ffffffff ffffffff 000 s BUILD_2DA_COLNAME010
+f ffffffff ffffffff 000 s BUILD_2DA_COLNAME011
+f ffffffff ffffffff 000 s BUILD_2DA_COLNAME012
+f ffffffff ffffffff 000 s BUILD_2DA_COLNAME013
+f ffffffff ffffffff 000 s BUILD_2DA_COLNAME014
+f ffffffff ffffffff 000 s BUILD_2DA_COLNAME015
+f ffffffff ffffffff 000 s BUILD_2DA_COLNAME016
+f ffffffff ffffffff 000 s BUILD_2DA_COLNAME017
+f ffffffff ffffffff 000 s BUILD_2DA_COLNAME018
+f ffffffff ffffffff 000 s BUILD_2DA_COLNAME019
+f ffffffff ffffffff 000 s BUILD_2DA_COLNAME020
+f ffffffff ffffffff 000 s BUILD_2DA_COLNAME021
+f ffffffff ffffffff 000 s BUILD_2DA_COLNAME022
+f ffffffff ffffffff 000 s BUILD_2DA_COLNAME023
+f ffffffff ffffffff 000 s BUILD_2DA_COLNAME024
+f ffffffff ffffffff 001 i BUILD_CountPages
+fp i
+f ffffffff ffffffff 001 i BUILD_SetPages
+fp o
+f ffffffff ffffffff 001 i BUILD_CalcReciepeToken
+fp i
+f ffffffff ffffffff 000 i BUILD_SetUpConvoDefaults
+f ffffffff ffffffff 000 s BUILD_UTILS_CONTAINER
+f ffffffff ffffffff 001 i GetIsStackableItem
+fp o
+f ffffffff ffffffff 001 s BUILD_GetObjectName
+fp s
+f ffffffff ffffffff 001 i BUILD_GetCrafterLvl
+fp o
+f ffffffff ffffffff 002 s BUILD_CreateRecipeLabel
+fp i
+fp o
+f ffffffff ffffffff 002 i BUILD_GetTotalNumberOfAvailableRessources
+fp o
+fp s
+f ffffffff ffffffff 003 s BUILD_MissingRessourceColor
+fp o
+fp s
+fp i
+f ffffffff ffffffff 002 s BUILD_BuildUpComponentText
+fp i
+fp o
+f ffffffff ffffffff 003 s BUILD_CreateRecipeText
+fp i
+fp o
+fp o
+f ffffffff ffffffff 003 i BUILD_IsRecipePossibleToBuild
+fp o
+fp o
+fp i
+f ffffffff ffffffff 002 s BUILD_CollectProductData
+fp i
+fp o
+f ffffffff ffffffff 002 s BUILD_CollectComponentData
+fp i
+fp o
+f ffffffff ffffffff 002 s BUILD_CollectBiProductData
+fp i
+fp o
+f ffffffff ffffffff 002 i BUILD_CollectAttributeData
+fp i
+fp o
+f ffffffff ffffffff 002 i BUILD_UseComponents
+fp o
+fp i
+f ffffffff ffffffff 003 v BUILD_CreateCraftingResult
+fp o
+fp s
+fp o
+f ffffffff ffffffff 000 f BUILD_FLOAT_ANIM_RES
+f ffffffff ffffffff 000 s BUILD_RESTAG_SAND
+f ffffffff ffffffff 000 s BUILD_RESTAG_CLAY
+f ffffffff ffffffff 000 s BUILD_RESTAG_WOD1
+f ffffffff ffffffff 000 s BUILD_RESTAG_ORE1
+f ffffffff ffffffff 000 s BUILD_TOOL_SANDC
+f ffffffff ffffffff 000 s BUILD_TOOL_WOODS
+f ffffffff ffffffff 000 s BUILD_TOOL_ORES
+f ffffffff ffffffff 000 s BUILD_UNKNOWN
+f ffffffff ffffffff 000 s BUILD_MSGCRE_RES1
+f ffffffff ffffffff 000 s BUILD_MSGCRE_RES2
+f ffffffff ffffffff 001 i BUILD_SaveRessource
+fp o
+f ffffffff ffffffff 002 v BUILD_CreateLandRessource
+fp o
+fp o
+f ffffffff ffffffff 002 v BUILD_WorkingAnimOnLandRessources
+fp o
+fp o
+f ffffffff ffffffff 001 s BUILD_MissingCraftingTool
+fp o
+f ffffffff ffffffff 000 s MODULE_SWITCH_ENABLE_UMD_SCROLLS
+f ffffffff ffffffff 000 s MODULE_SWITCH_DISABLE_ITEM_CREATION_FEATS
+f ffffffff ffffffff 000 s MODULE_SWITCH_AOE_HURT_NEUTRAL_NPCS
+f ffffffff ffffffff 000 s MODULE_SWITCH_ENABLE_CRAFT_WAND_50_CHARGES
+f ffffffff ffffffff 000 s MODULE_SWITCH_EPIC_SPELLS_HURT_CASTER
+f ffffffff ffffffff 000 s MODULE_SWITCH_SPELL_CORERULES_DMASTERTOUCH
+f ffffffff ffffffff 000 s MODULE_SWITCH_RESTRICT_USE_POISON_TO_FEAT
+f ffffffff ffffffff 000 s MODULE_SWITCH_ENABLE_MULTI_HENCH_AOE_DAMAGE
+f ffffffff ffffffff 000 s MODULE_SWITCH_ENABLE_NPC_AOE_HURT_ALLIES
+f ffffffff ffffffff 000 s MODULE_SWITCH_ENABLE_BEBILITH_RUIN_ARMOR
+f ffffffff ffffffff 000 s MODULE_SWITCH_ENABLE_INVISIBLE_GLYPH_OF_WARDING
+f ffffffff ffffffff 000 s MODULE_SWITCH_ENABLE_CROSSAREA_WALKWAYPOINTS
+f ffffffff ffffffff 000 s MODULE_SWITCH_DISABLE_SECRET_DOOR_FLASH
+f ffffffff ffffffff 000 s MODULE_SWITCH_ENABLE_TAGBASED_SCRIPTS
+f ffffffff ffffffff 000 s MODULE_SWITCH_USE_XP2_RESTSYSTEM
+f ffffffff ffffffff 000 s MODULE_SWITCH_DISABLE_AI_DISPEL_AOE
+f ffffffff ffffffff 000 s MODULE_SWITCH_NO_RANDOM_MONSTER_LOOT
+f ffffffff ffffffff 000 s MODULE_VAR_OVERRIDE_SPELLSCRIPT
+f ffffffff ffffffff 000 s MODULE_VAR_TAGBASED_SCRIPT_PREFIX
+f ffffffff ffffffff 000 s MODULE_VAR_WANDERING_MONSTER_2DA
+f ffffffff ffffffff 000 s MODULE_VAR_AI_NO_DISPEL_AOE_CHANCE
+f ffffffff ffffffff 000 s MODULE_VAR_AI_STOP_EXPERTISE_ABUSE
+f ffffffff ffffffff 000 s CREATURE_VAR_CUSTOM_AISCRIPT
+f ffffffff ffffffff 000 s CREATURE_VAR_RANDOMIZE_NAME
+f ffffffff ffffffff 000 s CREATURE_VAR_RANDOMIZE_SPELLUSE
+f ffffffff ffffffff 000 s CREATURE_VAR_USE_SPAWN_STEALTH
+f ffffffff ffffffff 000 s CREATURE_VAR_USE_SPAWN_SEARCH
+f ffffffff ffffffff 000 s CREATURE_VAR_USE_SPAWN_AMBIENT
+f ffffffff ffffffff 000 s CREATURE_VAR_USE_SPAWN_AMBIENT_IMMOBILE
+f ffffffff ffffffff 000 s CREATURE_VAR_IMMUNE_TO_DISPEL
+f ffffffff ffffffff 000 s CREATURE_VAR_IS_INCORPOREAL
+f ffffffff ffffffff 000 s CREATURE_VAR_NUMBER_OF_ATTACKS
+f ffffffff ffffffff 000 s CREATURE_AI_MODIFIED_MAGIC_RATE
+f ffffffff ffffffff 000 s CREATURE_AI_MODIFIED_OFFENSE_RATE
+f ffffffff ffffffff 000 s CREATURE_AI_MODIFIED_COMPASSION_RATE
+f ffffffff ffffffff 000 s CREATURE_VAR_PALE_MASTER_SPECIAL_ITEM
+f ffffffff ffffffff 000 i X2_ITEM_EVENT_ACTIVATE
+f ffffffff ffffffff 000 i X2_ITEM_EVENT_EQUIP
+f ffffffff ffffffff 000 i X2_ITEM_EVENT_UNEQUIP
+f ffffffff ffffffff 000 i X2_ITEM_EVENT_ONHITCAST
+f ffffffff ffffffff 000 i X2_ITEM_EVENT_ACQUIRE
+f ffffffff ffffffff 000 i X2_ITEM_EVENT_UNACQUIRE
+f ffffffff ffffffff 000 i X2_ITEM_EVENT_SPELLCAST_AT
+f ffffffff ffffffff 000 i X2_EXECUTE_SCRIPT_CONTINUE
+f ffffffff ffffffff 000 i X2_EXECUTE_SCRIPT_END
+f ffffffff ffffffff 001 v SetUserDefinedItemEventNumber
+fp i
+f ffffffff ffffffff 000 i GetUserDefinedItemEventNumber
+f ffffffff ffffffff 002 v SetModuleSwitch
+fp s
+fp i
+f ffffffff ffffffff 001 i GetModuleSwitchValue
+fp s
+f ffffffff ffffffff 000 s DOOR_FLAG_RESIST_KNOCK
+f ffffffff ffffffff 003 v SetDoorFlag
+fp o
+fp s
+fp i
+f ffffffff ffffffff 002 i GetDoorFlag
+fp o
+fp s
+f ffffffff ffffffff 000 s WAYPOINT_VAR_FORCE_SETFACING
+f ffffffff ffffffff 000 s ITEM_FLAG_NO_CRAFT_MODIFICATION
+f ffffffff ffffffff 003 v SetItemFlag
+fp o
+fp s
+fp i
+f ffffffff ffffffff 002 i GetItemFlag
+fp o
+fp s
+f ffffffff ffffffff 002 i ExecuteScriptAndReturnInt
+fp s
+fp o
+f ffffffff ffffffff 001 v SetExecutedScriptReturnValue
+fp i
+f ffffffff ffffffff 001 v SetUserDefinedItemEventPrefix
+fp s
+f ffffffff ffffffff 001 v SetModuleOverrideSpellscript
+fp s
+f ffffffff ffffffff 003 v SetCreatureFlag
+fp o
+fp s
+fp i
+f ffffffff ffffffff 002 i GetCreatureFlag
+fp o
+fp s
+f ffffffff ffffffff 002 v SetCreatureOverrideAIScript
+fp o
+fp s
+f ffffffff ffffffff 001 v SetCreatureOverrideAIScriptFinished
+fp o
+f ffffffff ffffffff 001 v ClearCreatureOverrideAIScriptTarget
+fp o
+f ffffffff ffffffff 001 o GetCreatureOverrideAIScriptTarget
+fp o
+f ffffffff ffffffff 001 v SetWanderingMonster2DAFile
+fp s
+f ffffffff ffffffff 000 s GetModuleOverrideSpellscript
+f ffffffff ffffffff 000 v SetModuleOverrideSpellScriptFinished
+f ffffffff ffffffff 000 i GetModuleOverrideSpellScriptFinished
+f ffffffff ffffffff 001 s GetUserDefinedItemEventScriptName
+fp o
+f ffffffff ffffffff 002 t0001 GetStringTokenizer
+fp s
+fp s
+f ffffffff ffffffff 001 i HasMoreTokens
+fp t0001
+f ffffffff ffffffff 001 t0001 AdvanceToNextToken
+fp t0001
+f ffffffff ffffffff 001 s GetNextToken
+fp t0001
+f ffffffff ffffffff 002 i GetNumberTokens
+fp s
+fp s
+f ffffffff ffffffff 003 s GetTokenByPosition
+fp s
+fp s
+fp i
+f ffffffff ffffffff 000 i BUILD_HELPER_COL
+f ffffffff ffffffff 000 i BUILD_HELPER_ROW
+f ffffffff ffffffff 000 i BUILD_DEBUG_MSGS
+f ffffffff ffffffff 000 s BUILD_HELPER_PLC
+f ffffffff ffffffff 000 s BUILD_HELPER_CHK
+f ffffffff ffffffff 000 f BUILD_WAIT_REUSE
+f ffffffff ffffffff 000 i BUILD_LIMT_OF_HP
+f ffffffff ffffffff 000 f BUILD_FLOAT_ANIM_WB
+f 0000029a 0000033c 002 v d
+fp s
+fp o
+f ffffffff ffffffff 002 i CountTokens
+fp s
+fp s
+f ffffffff ffffffff 003 v ReduceStackedItems
+fp o
+fp s
+fp i
+f ffffffff ffffffff 001 i RoundFloatToInt
+fp f
+f ffffffff ffffffff 001 s RoundFloatToString
+fp f
+f ffffffff ffffffff 001 s PrintLocation
+fp e2
+f ffffffff ffffffff 003 f DeterminateZCoordinateOnGround
+fp o
+fp f
+fp f
+f ffffffff ffffffff 001 i IsCreatedLocationValid
+fp e2
+f 00000275 0000029a 000 v main
+f 0000000d 00000015 000 v #loader
+f 00000015 00000275 000 v #globals
+v 00000017 ffffffff 00000000 s BUILD_LANG_DLG_WELCOME
+v 00000034 ffffffff 00000004 s BUILD_LANG_DLG_WBNEXTP
+v 0000004d ffffffff 00000008 s BUILD_LANG_DLG_WBBACKP
+v 00000066 ffffffff 0000000c s BUILD_LANG_DLG_WBEXITB
+v 0000007e ffffffff 00000010 s BUILD_LANG_DLG_WBBUILD
+v 0000009b ffffffff 00000014 s BUILD_LANG_DLG_NOSUCCS
+v 000000c4 ffffffff 00000018 s BUILD_LANG_RES_DMGSUC1
+v 000000e7 ffffffff 0000001c s BUILD_LANG_RES_DMGSUC2
+v 0000010e ffffffff 00000020 s BUILD_LANG_RES_NOTMORE
+v 00000140 ffffffff 00000024 s BUILD_LANG_RES_NOTOUSE
+v 00000173 ffffffff 00000028 s BUILD_LANG_RES_NOTOOLS
+v 000001a8 ffffffff 0000002c s BUILD_LANG_RCP_CRAFTS1
+v 000001d5 ffffffff 00000030 s BUILD_LANG_RCP_CRAFTS2
+v 000001f6 ffffffff 00000034 s BUILD_LANG_RES_DMGMUCH
+v 00000210 ffffffff 00000038 s BUILD_LANG_RES_DMGMORE
+v 00000229 ffffffff 0000003c i DELIM_NOT_FOUND
+v 00000241 ffffffff 00000040 s script
+v 0000029a 00000334 00000000 o o
+v 0000029a 00000334 00000004 s m
+l00 0000001 00000015 00000032
+l00 0000002 00000032 0000004b
+l00 0000003 0000004b 00000064
+l00 0000004 00000064 0000007c
+l00 0000005 0000007c 00000099
+l00 0000006 00000099 000000c2
+l00 0000008 000000c2 000000e5
+l00 0000009 000000e5 0000010c
+l00 0000010 0000010c 0000013e
+l00 0000011 0000013e 00000171
+l00 0000012 00000171 000001a6
+l00 0000013 000001a6 000001d3
+l00 0000014 000001d3 000001f4
+l00 0000016 000001f4 0000020e
+l00 0000017 0000020e 00000227
+l01 0000022 00000227 00000227
+l01 0000023 00000227 00000227
+l01 0000024 00000227 00000227
+l01 0000025 00000227 00000227
+l01 0000026 00000227 00000227
+l01 0000029 00000227 0000023f
+l02 0000002 0000023f 00000263
+l02 0000005 00000275 00000298
+l02 0000007 00000298 0000029a
+l08 0000025 0000029a 000002a2
+l08 0000026 000002b4 000002c2
+l08 0000027 000002f0 00000300
+l08 0000028 0000031f 00000334
+l08 0000029 00000334 0000033c

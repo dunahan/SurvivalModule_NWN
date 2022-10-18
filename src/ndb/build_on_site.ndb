@@ -1,0 +1,459 @@
+NDB V1.0
+0000009 0000002 0000167 0000061 0000103
+n00 build_util_lang
+n01 x0_i0_stringlib
+n02 x3_inc_string
+n03 build_util_wrkb
+n04 build_util_recp
+n05 build_util_resc
+n06 x2_inc_switches
+n07 build_util_inc
+N08 build_on_site
+s 03 vector
+sf f x
+sf f y
+sf f z
+s 05 sStringTokenizer
+sf i nRemainingLen
+sf s sOrig
+sf s sRemaining
+sf s sDelim
+sf s sLastTok
+f ffffffff ffffffff 000 s STRING_COLOR_BLACK
+f ffffffff ffffffff 000 s STRING_COLOR_BLUE
+f ffffffff ffffffff 000 s STRING_COLOR_GREEN
+f ffffffff ffffffff 000 s STRING_COLOR_PINK
+f ffffffff ffffffff 000 s STRING_COLOR_RED
+f ffffffff ffffffff 000 s STRING_COLOR_ROSE
+f ffffffff ffffffff 000 s STRING_COLOR_WHITE
+f ffffffff ffffffff 002 s StringToRGBString
+fp s
+fp s
+f ffffffff ffffffff 003 s StringParse
+fp s
+fp s
+fp i
+f ffffffff ffffffff 004 s StringRemoveParsed
+fp s
+fp s
+fp s
+fp i
+f 00000efe 00001076 003 s StringReplace
+fp s
+fp s
+fp s
+f ffffffff ffffffff 000 i BUILD_MAXRECI_PG
+f ffffffff ffffffff 000 s BUILD_2DA_COLNAME001
+f ffffffff ffffffff 000 s BUILD_2DA_COLNAME002
+f ffffffff ffffffff 000 s BUILD_2DA_COLNAME003
+f ffffffff ffffffff 000 s BUILD_2DA_COLNAME004
+f ffffffff ffffffff 000 s BUILD_2DA_COLNAME005
+f ffffffff ffffffff 000 s BUILD_2DA_COLNAME006
+f ffffffff ffffffff 000 s BUILD_2DA_COLNAME007
+f ffffffff ffffffff 000 s BUILD_2DA_COLNAME008
+f ffffffff ffffffff 000 s BUILD_2DA_COLNAME009
+f ffffffff ffffffff 000 s BUILD_2DA_COLNAME010
+f ffffffff ffffffff 000 s BUILD_2DA_COLNAME011
+f ffffffff ffffffff 000 s BUILD_2DA_COLNAME012
+f ffffffff ffffffff 000 s BUILD_2DA_COLNAME013
+f ffffffff ffffffff 000 s BUILD_2DA_COLNAME014
+f ffffffff ffffffff 000 s BUILD_2DA_COLNAME015
+f ffffffff ffffffff 000 s BUILD_2DA_COLNAME016
+f ffffffff ffffffff 000 s BUILD_2DA_COLNAME017
+f ffffffff ffffffff 000 s BUILD_2DA_COLNAME018
+f ffffffff ffffffff 000 s BUILD_2DA_COLNAME019
+f ffffffff ffffffff 000 s BUILD_2DA_COLNAME020
+f ffffffff ffffffff 000 s BUILD_2DA_COLNAME021
+f ffffffff ffffffff 000 s BUILD_2DA_COLNAME022
+f ffffffff ffffffff 000 s BUILD_2DA_COLNAME023
+f ffffffff ffffffff 000 s BUILD_2DA_COLNAME024
+f ffffffff ffffffff 001 i BUILD_CountPages
+fp i
+f ffffffff ffffffff 001 i BUILD_SetPages
+fp o
+f ffffffff ffffffff 001 i BUILD_CalcReciepeToken
+fp i
+f ffffffff ffffffff 000 i BUILD_SetUpConvoDefaults
+f ffffffff ffffffff 000 s BUILD_UTILS_CONTAINER
+f ffffffff ffffffff 001 i GetIsStackableItem
+fp o
+f ffffffff ffffffff 001 s BUILD_GetObjectName
+fp s
+f ffffffff ffffffff 001 i BUILD_GetCrafterLvl
+fp o
+f ffffffff ffffffff 002 s BUILD_CreateRecipeLabel
+fp i
+fp o
+f ffffffff ffffffff 002 i BUILD_GetTotalNumberOfAvailableRessources
+fp o
+fp s
+f ffffffff ffffffff 003 s BUILD_MissingRessourceColor
+fp o
+fp s
+fp i
+f ffffffff ffffffff 002 s BUILD_BuildUpComponentText
+fp i
+fp o
+f ffffffff ffffffff 003 s BUILD_CreateRecipeText
+fp i
+fp o
+fp o
+f ffffffff ffffffff 003 i BUILD_IsRecipePossibleToBuild
+fp o
+fp o
+fp i
+f ffffffff ffffffff 002 s BUILD_CollectProductData
+fp i
+fp o
+f ffffffff ffffffff 002 s BUILD_CollectComponentData
+fp i
+fp o
+f ffffffff ffffffff 002 s BUILD_CollectBiProductData
+fp i
+fp o
+f ffffffff ffffffff 002 i BUILD_CollectAttributeData
+fp i
+fp o
+f ffffffff ffffffff 002 i BUILD_UseComponents
+fp o
+fp i
+f ffffffff ffffffff 003 v BUILD_CreateCraftingResult
+fp o
+fp s
+fp o
+f ffffffff ffffffff 000 f BUILD_FLOAT_ANIM_RES
+f ffffffff ffffffff 000 s BUILD_RESTAG_SAND
+f ffffffff ffffffff 000 s BUILD_RESTAG_CLAY
+f ffffffff ffffffff 000 s BUILD_RESTAG_WOD1
+f ffffffff ffffffff 000 s BUILD_RESTAG_ORE1
+f ffffffff ffffffff 000 s BUILD_TOOL_SANDC
+f ffffffff ffffffff 000 s BUILD_TOOL_WOODS
+f ffffffff ffffffff 000 s BUILD_TOOL_ORES
+f ffffffff ffffffff 000 s BUILD_UNKNOWN
+f ffffffff ffffffff 000 s BUILD_MSGCRE_RES1
+f ffffffff ffffffff 000 s BUILD_MSGCRE_RES2
+f ffffffff ffffffff 001 i BUILD_SaveRessource
+fp o
+f ffffffff ffffffff 002 v BUILD_CreateLandRessource
+fp o
+fp o
+f ffffffff ffffffff 002 v BUILD_WorkingAnimOnLandRessources
+fp o
+fp o
+f ffffffff ffffffff 001 s BUILD_MissingCraftingTool
+fp o
+f ffffffff ffffffff 000 s MODULE_SWITCH_ENABLE_UMD_SCROLLS
+f ffffffff ffffffff 000 s MODULE_SWITCH_DISABLE_ITEM_CREATION_FEATS
+f ffffffff ffffffff 000 s MODULE_SWITCH_AOE_HURT_NEUTRAL_NPCS
+f ffffffff ffffffff 000 s MODULE_SWITCH_ENABLE_CRAFT_WAND_50_CHARGES
+f ffffffff ffffffff 000 s MODULE_SWITCH_EPIC_SPELLS_HURT_CASTER
+f ffffffff ffffffff 000 s MODULE_SWITCH_SPELL_CORERULES_DMASTERTOUCH
+f ffffffff ffffffff 000 s MODULE_SWITCH_RESTRICT_USE_POISON_TO_FEAT
+f ffffffff ffffffff 000 s MODULE_SWITCH_ENABLE_MULTI_HENCH_AOE_DAMAGE
+f ffffffff ffffffff 000 s MODULE_SWITCH_ENABLE_NPC_AOE_HURT_ALLIES
+f ffffffff ffffffff 000 s MODULE_SWITCH_ENABLE_BEBILITH_RUIN_ARMOR
+f ffffffff ffffffff 000 s MODULE_SWITCH_ENABLE_INVISIBLE_GLYPH_OF_WARDING
+f ffffffff ffffffff 000 s MODULE_SWITCH_ENABLE_CROSSAREA_WALKWAYPOINTS
+f ffffffff ffffffff 000 s MODULE_SWITCH_DISABLE_SECRET_DOOR_FLASH
+f ffffffff ffffffff 000 s MODULE_SWITCH_ENABLE_TAGBASED_SCRIPTS
+f ffffffff ffffffff 000 s MODULE_SWITCH_USE_XP2_RESTSYSTEM
+f ffffffff ffffffff 000 s MODULE_SWITCH_DISABLE_AI_DISPEL_AOE
+f ffffffff ffffffff 000 s MODULE_SWITCH_NO_RANDOM_MONSTER_LOOT
+f ffffffff ffffffff 000 s MODULE_VAR_OVERRIDE_SPELLSCRIPT
+f ffffffff ffffffff 000 s MODULE_VAR_TAGBASED_SCRIPT_PREFIX
+f ffffffff ffffffff 000 s MODULE_VAR_WANDERING_MONSTER_2DA
+f ffffffff ffffffff 000 s MODULE_VAR_AI_NO_DISPEL_AOE_CHANCE
+f ffffffff ffffffff 000 s MODULE_VAR_AI_STOP_EXPERTISE_ABUSE
+f ffffffff ffffffff 000 s CREATURE_VAR_CUSTOM_AISCRIPT
+f ffffffff ffffffff 000 s CREATURE_VAR_RANDOMIZE_NAME
+f ffffffff ffffffff 000 s CREATURE_VAR_RANDOMIZE_SPELLUSE
+f ffffffff ffffffff 000 s CREATURE_VAR_USE_SPAWN_STEALTH
+f ffffffff ffffffff 000 s CREATURE_VAR_USE_SPAWN_SEARCH
+f ffffffff ffffffff 000 s CREATURE_VAR_USE_SPAWN_AMBIENT
+f ffffffff ffffffff 000 s CREATURE_VAR_USE_SPAWN_AMBIENT_IMMOBILE
+f ffffffff ffffffff 000 s CREATURE_VAR_IMMUNE_TO_DISPEL
+f ffffffff ffffffff 000 s CREATURE_VAR_IS_INCORPOREAL
+f ffffffff ffffffff 000 s CREATURE_VAR_NUMBER_OF_ATTACKS
+f ffffffff ffffffff 000 s CREATURE_AI_MODIFIED_MAGIC_RATE
+f ffffffff ffffffff 000 s CREATURE_AI_MODIFIED_OFFENSE_RATE
+f ffffffff ffffffff 000 s CREATURE_AI_MODIFIED_COMPASSION_RATE
+f ffffffff ffffffff 000 s CREATURE_VAR_PALE_MASTER_SPECIAL_ITEM
+f ffffffff ffffffff 000 i X2_ITEM_EVENT_ACTIVATE
+f ffffffff ffffffff 000 i X2_ITEM_EVENT_EQUIP
+f ffffffff ffffffff 000 i X2_ITEM_EVENT_UNEQUIP
+f ffffffff ffffffff 000 i X2_ITEM_EVENT_ONHITCAST
+f ffffffff ffffffff 000 i X2_ITEM_EVENT_ACQUIRE
+f ffffffff ffffffff 000 i X2_ITEM_EVENT_UNACQUIRE
+f ffffffff ffffffff 000 i X2_ITEM_EVENT_SPELLCAST_AT
+f ffffffff ffffffff 000 i X2_EXECUTE_SCRIPT_CONTINUE
+f ffffffff ffffffff 000 i X2_EXECUTE_SCRIPT_END
+f ffffffff ffffffff 001 v SetUserDefinedItemEventNumber
+fp i
+f 0000092f 0000096e 000 i GetUserDefinedItemEventNumber
+f ffffffff ffffffff 002 v SetModuleSwitch
+fp s
+fp i
+f ffffffff ffffffff 001 i GetModuleSwitchValue
+fp s
+f ffffffff ffffffff 000 s DOOR_FLAG_RESIST_KNOCK
+f ffffffff ffffffff 003 v SetDoorFlag
+fp o
+fp s
+fp i
+f ffffffff ffffffff 002 i GetDoorFlag
+fp o
+fp s
+f ffffffff ffffffff 000 s WAYPOINT_VAR_FORCE_SETFACING
+f ffffffff ffffffff 000 s ITEM_FLAG_NO_CRAFT_MODIFICATION
+f ffffffff ffffffff 003 v SetItemFlag
+fp o
+fp s
+fp i
+f ffffffff ffffffff 002 i GetItemFlag
+fp o
+fp s
+f ffffffff ffffffff 002 i ExecuteScriptAndReturnInt
+fp s
+fp o
+f ffffffff ffffffff 001 v SetExecutedScriptReturnValue
+fp i
+f ffffffff ffffffff 001 v SetUserDefinedItemEventPrefix
+fp s
+f ffffffff ffffffff 001 v SetModuleOverrideSpellscript
+fp s
+f ffffffff ffffffff 003 v SetCreatureFlag
+fp o
+fp s
+fp i
+f ffffffff ffffffff 002 i GetCreatureFlag
+fp o
+fp s
+f ffffffff ffffffff 002 v SetCreatureOverrideAIScript
+fp o
+fp s
+f ffffffff ffffffff 001 v SetCreatureOverrideAIScriptFinished
+fp o
+f ffffffff ffffffff 001 v ClearCreatureOverrideAIScriptTarget
+fp o
+f ffffffff ffffffff 001 o GetCreatureOverrideAIScriptTarget
+fp o
+f ffffffff ffffffff 001 v SetWanderingMonster2DAFile
+fp s
+f ffffffff ffffffff 000 s GetModuleOverrideSpellscript
+f ffffffff ffffffff 000 v SetModuleOverrideSpellScriptFinished
+f ffffffff ffffffff 000 i GetModuleOverrideSpellScriptFinished
+f ffffffff ffffffff 001 s GetUserDefinedItemEventScriptName
+fp o
+f ffffffff ffffffff 002 t0001 GetStringTokenizer
+fp s
+fp s
+f ffffffff ffffffff 001 i HasMoreTokens
+fp t0001
+f ffffffff ffffffff 001 t0001 AdvanceToNextToken
+fp t0001
+f ffffffff ffffffff 001 s GetNextToken
+fp t0001
+f ffffffff ffffffff 002 i GetNumberTokens
+fp s
+fp s
+f ffffffff ffffffff 003 s GetTokenByPosition
+fp s
+fp s
+fp i
+f ffffffff ffffffff 000 i BUILD_HELPER_COL
+f ffffffff ffffffff 000 i BUILD_HELPER_ROW
+f ffffffff ffffffff 000 i BUILD_DEBUG_MSGS
+f ffffffff ffffffff 000 s BUILD_HELPER_PLC
+f ffffffff ffffffff 000 s BUILD_HELPER_CHK
+f ffffffff ffffffff 000 f BUILD_WAIT_REUSE
+f ffffffff ffffffff 000 i BUILD_LIMT_OF_HP
+f ffffffff ffffffff 000 f BUILD_FLOAT_ANIM_WB
+f 00000a86 00000b28 002 v d
+fp s
+fp o
+f ffffffff ffffffff 002 i CountTokens
+fp s
+fp s
+f ffffffff ffffffff 003 v ReduceStackedItems
+fp o
+fp s
+fp i
+f ffffffff ffffffff 001 i RoundFloatToInt
+fp f
+f 00000dc1 00000efe 001 s RoundFloatToString
+fp f
+f 0000096e 00000a86 001 s PrintLocation
+fp e2
+f 00000b28 00000bfa 003 f DeterminateZCoordinateOnGround
+fp o
+fp f
+fp f
+f 00000bfa 00000dc1 001 i IsCreatedLocationValid
+fp e2
+f 00000251 0000092f 000 v main
+f 0000000d 00000015 000 v #loader
+f 00000015 00000251 000 v #globals
+v 00000017 ffffffff 00000000 s BUILD_LANG_DLG_WELCOME
+v 00000034 ffffffff 00000004 s BUILD_LANG_DLG_WBNEXTP
+v 0000004d ffffffff 00000008 s BUILD_LANG_DLG_WBBACKP
+v 00000066 ffffffff 0000000c s BUILD_LANG_DLG_WBEXITB
+v 0000007e ffffffff 00000010 s BUILD_LANG_DLG_WBBUILD
+v 0000009b ffffffff 00000014 s BUILD_LANG_DLG_NOSUCCS
+v 000000c4 ffffffff 00000018 s BUILD_LANG_RES_DMGSUC1
+v 000000e7 ffffffff 0000001c s BUILD_LANG_RES_DMGSUC2
+v 0000010e ffffffff 00000020 s BUILD_LANG_RES_NOTMORE
+v 00000140 ffffffff 00000024 s BUILD_LANG_RES_NOTOUSE
+v 00000173 ffffffff 00000028 s BUILD_LANG_RES_NOTOOLS
+v 000001a8 ffffffff 0000002c s BUILD_LANG_RCP_CRAFTS1
+v 000001d5 ffffffff 00000030 s BUILD_LANG_RCP_CRAFTS2
+v 000001f6 ffffffff 00000034 s BUILD_LANG_RES_DMGMUCH
+v 00000210 ffffffff 00000038 s BUILD_LANG_RES_DMGMORE
+v 00000229 ffffffff 0000003c i DELIM_NOT_FOUND
+v 00000253 00000927 00000000 i nEvent
+v 00000281 0000091b 00000004 o oPC
+v 00000296 0000091b 00000008 o oBuildNote
+v 000002ab 0000091b 0000000c e2 lBuildSite
+v 000002c0 0000091b 00000010 o oArea
+v 000002dd 0000091b 00000014 o oTargetSite
+v 00000395 0000091b 00000018 o o
+v 00000397 0000091b 0000001c i s
+v 000003ad 0000091b 00000020 i t
+v 0000040a 00000816 00000024 i w
+v 00000435 00000816 00000028 i h
+v 00000460 00000816 0000002c i c
+v 00000462 00000816 00000030 i r
+v 000004a3 00000816 00000034 f z
+v 000004a5 00000816 00000038 e2 locGridHelper
+v 0000092f 0000096c 00000000 i #retval
+v 0000096e 00000a84 00000000 s #retval
+v 0000096e 00000a7e 00000004 e2 l
+v 00000974 00000a78 00000008 t0000 vLTS
+v 00000a86 00000b20 00000000 o o
+v 00000a86 00000b20 00000004 s m
+v 00000b28 00000bf8 00000000 f #retval
+v 00000b28 00000bf2 00000004 f y
+v 00000b28 00000bf2 00000008 f x
+v 00000b28 00000bf2 0000000c o oArea
+v 00000b2a 00000bec 00000010 o oCreature
+v 00000b8f 00000bec 00000014 t0000 vActual
+v 00000bfa 00000dbf 00000000 i #retval
+v 00000bfa 00000db9 00000004 e2 locCreated
+v 00000bfc 00000db3 00000008 o oCreature
+v 00000c3b 00000db3 0000000c t0000 vCreature
+v 00000c61 00000db3 00000018 t0000 vCreated
+v 00000dc1 00000efc 00000000 s #retval
+v 00000dc1 00000ef6 00000004 f f
+v 00000dc3 00000ef0 00000008 s s
+v 00000e13 00000ef0 0000000c i r
+v 00000e5b 00000ef0 00000010 i l
+v 00000efe 00001074 00000000 s #retval
+v 00000efe 0000106e 00000004 s sReplace
+v 00000efe 0000106e 00000008 s sFind
+v 00000efe 0000106e 0000000c s sSource
+v 00000f00 00001068 00000010 i nFindLength
+v 00000f1d 00001068 00000014 i nPosition
+v 00000f33 00001068 00000018 s sRetVal
+v 00000f47 00001068 0000001c i nFound
+l00 0000001 00000015 00000032
+l00 0000002 00000032 0000004b
+l00 0000003 0000004b 00000064
+l00 0000004 00000064 0000007c
+l00 0000005 0000007c 00000099
+l00 0000006 00000099 000000c2
+l00 0000008 000000c2 000000e5
+l00 0000009 000000e5 0000010c
+l00 0000010 0000010c 0000013e
+l00 0000011 0000013e 00000171
+l00 0000012 00000171 000001a6
+l00 0000013 000001a6 000001d3
+l00 0000014 000001d3 000001f4
+l00 0000016 000001f4 0000020e
+l00 0000017 0000020e 00000227
+l01 0000022 00000227 00000227
+l01 0000023 00000227 00000227
+l01 0000024 00000227 00000227
+l01 0000025 00000227 00000227
+l01 0000026 00000227 00000227
+l01 0000029 00000227 0000023f
+l08 0000005 00000251 00000269
+l08 0000006 00000269 00000279
+l08 0000008 0000027f 00000294
+l08 0000009 00000294 000002a9
+l08 0000010 000002a9 000002be
+l08 0000011 000002be 000002db
+l08 0000012 000002db 000002f0
+l08 0000013 00000393 00000395
+l08 0000014 00000395 000003cd
+l08 0000016 000003cd 000003d7
+l08 0000017 000003dd 00000408
+l08 0000018 00000408 00000462
+l08 0000019 00000462 000004a1
+l08 0000020 000004a1 000004a3
+l08 0000021 000004a5 000004bd
+l08 0000022 000004bd 000004fe
+l08 0000023 000004fe 00000516
+l08 0000024 00000516 0000055a
+l08 0000025 0000055a 00000592
+l08 0000026 000005cd 00000615
+l08 0000028 0000064a 0000065a
+l08 0000029 00000660 00000692
+l08 0000030 00000692 000006fa
+l08 0000031 000006fa 00000726
+l08 0000032 0000072c 0000076b
+l08 0000034 0000076b 00000789
+l08 0000035 0000078f 000007b8
+l08 0000037 000007b8 000007cc
+l08 0000038 000007cc 000007ea
+l08 0000039 000007f0 00000816
+l08 0000042 00000822 00000824
+l08 0000043 00000824 00000847
+l08 0000044 00000847 0000085f
+l08 0000045 0000085f 00000898
+l08 0000046 00000898 000008dc
+l08 0000047 000008dc 000008ef
+l08 0000048 000008ef 00000903
+l08 0000051 00000909 0000091b
+l08 0000054 0000092d 0000092f
+l06 0000541 0000092f 0000096c
+l06 0000542 0000096c 0000096e
+l07 0000090 0000096e 0000098f
+l07 0000091 0000098f 00000a54
+l07 0000096 00000a54 00000a78
+l07 0000097 00000a7e 00000a86
+l07 0000025 00000a86 00000a8e
+l07 0000026 00000aa0 00000aae
+l07 0000027 00000adc 00000aec
+l07 0000028 00000b0b 00000b20
+l07 0000029 00000b20 00000b28
+l07 0000101 00000b28 00000b89
+l07 0000102 00000b89 00000baf
+l07 0000103 00000baf 00000bc2
+l07 0000105 00000bc2 00000bec
+l07 0000106 00000bf2 00000bfa
+l07 0000110 00000bfa 00000c35
+l07 0000111 00000c35 00000c5b
+l07 0000112 00000c5b 00000c7c
+l07 0000113 00000c7c 00000c8f
+l07 0000115 00000c8f 00000d45
+l07 0000118 00000d4b 00000d6b
+l07 0000120 00000d71 00000d73
+l07 0000121 00000d73 00000d93
+l07 0000123 00000d93 00000db3
+l07 0000124 00000db9 00000dc1
+l07 0000080 00000dc1 00000dea
+l07 0000081 00000dea 00000e11
+l07 0000082 00000e11 00000e59
+l07 0000083 00000e59 00000e99
+l07 0000084 00000e99 00000ea9
+l07 0000085 00000ec9 00000ef0
+l07 0000086 00000ef6 00000efe
+l02 0000179 00000efe 00000f1b
+l02 0000180 00000f1b 00000f31
+l02 0000181 00000f31 00000f45
+l02 0000184 00000f45 00000f70
+l02 0000185 00000f70 00000f86
+l02 0000188 00000f86 00000fcf
+l02 0000189 00000fcf 00000fef
+l02 0000190 00000fef 0000101a
+l02 0000193 00001020 00001068
+l02 0000194 0000106e 00001076

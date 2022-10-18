@@ -90,7 +90,7 @@
   },
   "OnClick": {
     "type": "resref",
-    "value": ""
+    "value": "build_struc_oncl"
   },
   "OnClosed": {
     "type": "resref",
@@ -122,7 +122,7 @@
   },
   "OnMeleeAttacked": {
     "type": "resref",
-    "value": ""
+    "value": "build_struc_onat"
   },
   "OnOpen": {
     "type": "resref",
@@ -142,7 +142,7 @@
   },
   "OnUsed": {
     "type": "resref",
-    "value": ""
+    "value": "build_struc_onus"
   },
   "OnUserDefined": {
     "type": "resref",

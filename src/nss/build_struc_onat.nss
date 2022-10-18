@@ -1,23 +1,18 @@
-#include "x0_i0_position"
+#include "build_util_inc"
+string script = "build_struc_oncl";
 
 void main()
-{
+{                                                                                           d("Running: "+script);
     object oPlaceable = OBJECT_SELF;
-    string sResRef = GetLocalString(oPlaceable, "BUILD_RES");
+    string sResRef = GetResRef(oPlaceable);
     object oCreator = GetLocalObject(oPlaceable, "Build_Creator");
-
-    location lActual = GetLocation(oPlaceable);
-    vector vActual = GetPositionFromLocation(lActual);
-    int i, nX = FloatToInt(vActual.x), nY = FloatToInt(vActual.y),
-           nZ = FloatToInt(vActual.z), nO = FloatToInt(GetFacingFromLocation(lActual));
-
+    location lActual = GetLocation(oPlaceable);                                             d("VarDump: "+GetName(oPlaceable)+"\n"+sResRef+"\n"+GetName(oCreator)+"\n"+PrintLocation(lActual)+"\n"+GetName(GetLastDamager()));
     AssignCommand(GetLastDamager(), ClearAllActions(TRUE));
 
-    object oNewStructure = CreateObject(OBJECT_TYPE_PLACEABLE, sResRef, lActual
-/*                         Location(GetAreaFromLocation(lActual),
-                           Vector(IntToFloat(nX), IntToFloat(nY), IntToFloat(nZ)),
-                             IntToFloat(nO))*/
-                           );                                                   // Create solid placeable
+    string sType = GetStringRight(sResRef, 1);
+    if (sType == "i")
+        sResRef = GetStringLeft(sResRef, GetStringLength(sResRef)-1)+"v";       // from resref "build_beamfull_i" to "build_beamfull_v"
 
+    object oNewStructure = CreateObject(OBJECT_TYPE_PLACEABLE, sResRef, lActual); // Create solid placeable
     DestroyObject(oPlaceable, 1.0);                                             // Destroy the asset
 }

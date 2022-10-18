@@ -1,3 +1,6 @@
+#include "build_util_inc"
+string script = "build_workb_ocl";
+
 void main()
 {
   if (GetIsObjectValid(GetFirstItemInInventory()))
