@@ -1,0 +1,115 @@
+Sub Spreadsheet()
+Response = MsgBox("Are you sure you wish to create an excel spreadsheet of this information?  Doing so will overwrite the current information in the Spreadsheet tab of this workbook", vbYesNo, "CREATE SPREADSHEET?")
+If Response = vbNo Then Exit Sub
+Application.EnableEvents = False
+Application.ScreenUpdating = False
+Sheets("Spreadsheet").Range("B6:IV65536").ClearContents
+lockspace = 0
+rflip = 9
+'While flips through all cells.
+While Not Range("A" & rflip).Text = ""
+    dflip = 1
+    cflip = 2
+    lastval = Mid(Range("A" & rflip).Text, 1, 1)
+    CurrentVal = lastval
+'While that flips through characters in cell
+    While dflip <= Len(Range("A" & rflip).Text)
+'Checks to see if should be locked when quotations start/end
+        DoColumnFlip = 0
+        DoWriteData = 0
+        If CurrentVal = """" Then
+            If lockspace = 0 Then
+                lockspace = 1
+            Else
+                lockspace = 0
+            End If
+        End If
+            
+'If loop that sets what needs to be done.
+        If lockspace = 1 Then
+            If lastval = " " And CurrentVal = """" Then DoColumnFlip = 1
+            DoWriteData = 1
+        ElseIf Not CurrentVal = " " And Not lastval = " " Then
+            DoWriteData = 1
+        ElseIf Not CurrentVal = " " And lastval = " " Then
+            DoColumnFlip = 1
+            DoWriteData = 1
+        End If
+        
+'Write data and flip column
+        If DoColumnFlip = 1 Then cflip = cflip + 1
+        If DoWriteData = 1 Then Sheets("Spreadsheet").Cells(rflip - 3, cflip).Value = Sheets("Spreadsheet").Cells(rflip - 3, cflip).Value & CurrentVal
+        
+'Increments variables
+        dflip = dflip + 1
+        lastval = CurrentVal
+        CurrentVal = Mid(Range("A" & rflip).Text, dflip, 1)
+    Wend
+    rflip = rflip + 1
+Wend
+Sheets("Spreadsheet").Columns("B:IV").EntireColumn.AutoFit
+Application.ScreenUpdating = True
+Application.EnableEvents = True
+End Sub
+Sub TwoDA()
+    Response = MsgBox("Are you sure you wish to create a 2DA out of this information?  Doing so will overwrite the current information in the 2DA tab of this workbook", vbYesNo, "CREATE 2DA?")
+    If Response = vbNo Then Exit Sub
+'Startup settings
+    Application.EnableEvents = False
+    Application.ScreenUpdating = False
+    Sheets("2da").Range("A9:C65536").ClearContents
+    spacing = Range("J2").Value
+    
+'finds # of columns and rows
+    darows = Application.WorksheetFunction.CountA(Range("C6:C65535"))
+    dacolumns = Application.WorksheetFunction.CountA(Range("B7:IV7"))
+
+'Sets the longest string in each column
+    cflip = 2
+    While cflip < dacolumns + 2
+        rflip = 6
+        dalarge = 0
+        While rflip <= darows + 6
+            curval = Len(Cells(rflip, cflip).Text)
+            If curval > dalarge Then dalarge = curval
+            rflip = rflip + 1
+        Wend
+        Cells(65536, cflip).Value = dalarge + spacing
+        cflip = cflip + 1
+    Wend
+    
+'This will right the data
+    rflip = 6
+    While rflip < darows + 6
+        cflip = 2
+        currentwrite = ""
+        While cflip < dacolumns + 2
+            addval = Cells(rflip, cflip).Text & " "
+            maxval = Cells(65536, cflip).Value
+            While Len(addval) < maxval
+                addval = addval & " "
+            Wend
+            currentwrite = currentwrite & addval
+            cflip = cflip + 1
+        Wend
+        Sheets("2da").Range("A" & rflip + 3).Value = currentwrite
+        rflip = rflip + 1
+    Wend
+    Range("B65536:IV65536").ClearContents
+    Application.EnableEvents = True
+    Application.ScreenUpdating = True
+End Sub
+Sub Copy()
+    ActiveSheet.Unprotect
+    Range("A7:A65536").Copy
+End Sub
+
+
+
+Private Sub Worksheet_Change(ByVal Target As Range)
+    For Each Cell In Target
+        If Cell.Row > 6 And Cell.Column > 2 And Range("B" & Cell.Row).Text = "" Then
+            Range("B" & Cell.Row).Value = Cell.Row - 7
+        End If
+    Next
+End Sub
